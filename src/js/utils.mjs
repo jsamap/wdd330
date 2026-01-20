@@ -36,3 +36,8 @@ export function renderListWithTemplate(template, parentElement, list, position =
   }
   parentElement.insertAdjacentHTML(position, elements.join(""));
 }
+
+export function setCartItemsNumber(){
+    const cartItems = getLocalStorage("so-cart");
+    document.getElementById("cart-count").textContent = (cartItems!=null) ? cartItems.length : 0;
+}
