@@ -121,14 +121,16 @@ button {
   padding-top: 1em;
   position: relative;
   text-align: center;
+  /* display:flex; 
+  align-items:center; */
 }
 
 .cart svg {
   width: 25px;
 }
 
-.cart:hover svg {
-  fill: gray;
+.cart:hover * {
+  opacity: 95%;
 }
 
 /* End cart icon styles */
@@ -260,4 +262,21 @@ button {
 footer {
   font-size: var(--small-font);
   padding: 1em;
+}
+
+.cart p {
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  border-radius: 11px;
+  background-color: var(--tertiary-color);
+  color: white;
+  text-align: center;
+  line-height: 23px;
+  font-size: 0.9rem;
+  opacity: 85%;
 }
