@@ -1,5 +1,5 @@
 import{r as e,l as s,s as c,g as i}from"./utils-Dj6LvCoe.js";class o{constructor(a,t){this.dataSource=a,this.listElement=t}async init(){this.renderList(this.dataSource)}cartItemTemplate(a){return`<li class="cart-card divider">
-                <a href="#" class="cart-card__image">
+                <a href="/product_pages/?product=${a.Id}" class="cart-card__image">
                     <picture>
                         <source srcset="${a.Images.PrimarySmall}" media="(max-width: 250px)">
                         <source srcset="${a.Images.PrimaryMedium}" media="(max-width: 500px)">

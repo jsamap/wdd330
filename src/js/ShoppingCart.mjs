@@ -13,7 +13,7 @@ export default class ShoppingCart {
     cartItemTemplate(item) {
         return (
             `<li class="cart-card divider">
-                <a href="#" class="cart-card__image">
+                <a href="/product_pages/?product=${item.Id}" class="cart-card__image">
                     <picture>
                         <source srcset="${item.Images.PrimarySmall}" media="(max-width: 250px)">
                         <source srcset="${item.Images.PrimaryMedium}" media="(max-width: 500px)">
