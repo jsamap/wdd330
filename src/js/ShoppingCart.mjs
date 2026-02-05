@@ -14,10 +14,11 @@ export default class ShoppingCart {
         return (
             `<li class="cart-card divider">
                 <a href="#" class="cart-card__image">
-                    <img
-                    src="${item.Image}"
-                    alt="${item.Name}"
-                    />
+                    <picture>
+                        <source srcset="${item.Images.PrimarySmall}" media="(max-width: 250px)">
+                        <source srcset="${item.Images.PrimaryMedium}" media="(max-width: 500px)">
+                        <img src="${item.Images.PrimaryLarge}" alt="${item.Name}" />
+                    </picture>
                 </a>
                 <a href="#">
                     <h2 class="card__name">${item.Name}</h2>

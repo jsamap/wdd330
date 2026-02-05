@@ -17,10 +17,12 @@ export default class ProudctList {
           `<li class="product-card">
             <a href="/product_pages/?product=${product.Id}">
               <div class="product-card-image">
-                <img
-                  src="${product.Images.PrimaryMedium}"
-                  alt="${product.Name}"
-                />
+
+                <picture>
+                  <source srcset="${product.Images.PrimarySmall}" media="(max-width: 250px)">
+                  <source srcset="${product.Images.PrimaryMedium}" media="(max-width: 500px)">
+                  <img src="${product.Images.PrimaryLarge}" alt="${product.Name}" />
+                </picture>
               </div>
               <h3 class="card__brand">${product.Brand.Name}</h3>
               <h2 class="card__name">${product.Name}</h2>
