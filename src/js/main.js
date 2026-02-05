@@ -7,7 +7,11 @@ async function init() {
 
   const dataSource = new ProductData("tents");
   const listElement = document.querySelector(".product-list");
-  const productList = new ProductList(dataSource.category, dataSource, listElement);
+  const productList = new ProductList(
+    dataSource.category,
+    dataSource,
+    listElement,
+  );
   productList.init();
 
   setCartItemsNumber();
