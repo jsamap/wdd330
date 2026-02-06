@@ -346,6 +346,28 @@ footer {
     text-align: center;
   }
 }
+
+.alert {
+  display: flex;
+  background-color: rgb(255, 175, 140);
+  border: solid 1px lightgray;
+  padding: .25rem;
+  & p {
+    width: 90%;
+  }
+  & a {
+    font-weight: bold;
+    text-align: center; 
+  }
+  & div {
+    padding: .5rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
 /* #endregion */
 
 /* #region Checkout Form */
