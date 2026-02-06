@@ -36,7 +36,7 @@ header {
   padding: 0.5rem;
 }
 
-p {
+p, span {
   padding: 0.75rem;
 }
 
@@ -112,6 +112,7 @@ button {
 
 .divider {
   border-bottom: 2px solid var(--primary-color);
+  padding: 1rem;
 }
 
 /* End utility classes */
@@ -298,4 +299,164 @@ footer {
 .categories img {
   max-width: 100px;
 }
+
+/* #endregion */
+
+/* #region Cart */
+.cart-total {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  
+  & a{
+    padding: .75rem;
+    text-decoration: none;
+    color: white;
+    background-color: #525b0f;
+    border-radius: 3px;
+
+    &:hover {
+      color: rgb(240, 240, 240);
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+}
+
+/* #endregion */
+
+/* #region Checkout*/
+.checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+  }
+  & h3{
+    padding: 1rem;
+    text-align: center;
+  }
+}
+/* #endregion */
+
+/* #region Checkout Form */
+.checkout-form{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  flex: 1;
+  min-width: 0;
+  
+  & input[type="submit"]{
+    width: 150px;
+  }
+  & section{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+    }
+    
+    &.address{
+      flex-flow: column;
+    }
+    & div.multipleFields{
+      flex-flow: row;
+      gap: 1rem;
+      width: 100%;
+
+      @media screen and (max-width: 500px) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  & div{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+    }
+  }
+  & input[type="text"]{
+    padding: .5rem;
+    font-size: 1.1rem;
+  }
+  & input[type="submit"]{
+    padding: .5rem;
+    font-size: 1.1rem;
+    background-color: #525b0f;
+    color: white;
+    border-radius: 3px;
+    
+    &:hover {
+      color: rgb(240, 240, 240);
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+.multipleFields {
+  align-items: flex-end;
+}
+@media screen and (min-width: 500px) {
+  .multipleFields > div {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+h2 {
+  padding: 1rem 0;
+}
+h4 {
+  margin-top: 1rem;
+}
+
+/* #endregion */
+
+/* #region Checkout Summary */
+.checkout-summary{
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+
+  background-color: var(--light-grey);
+
+  & div{
+    display: flex;
+
+    & p {
+      text-align: left;
+      flex: 1;
+    }
+    & span {
+      text-align: right;
+    }
+  }
+}
+.order-total{
+  font-weight: bold;    
+}
+.form-submit{
+  display: flex;
+  justify-content: center;
+}
+/* #endregion */
+
+/* #region General */
+  .bold {
+    font-weight: bold;
+  }
 /* #endregion */
