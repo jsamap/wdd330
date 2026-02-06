@@ -1,0 +1,1 @@
+import{l as r,c,s}from"./utils-6aLUDPX2.js";import{E as a}from"./ExternalServices-D9P6I627.js";import{P as i}from"./ProductList-Cpeoxmeb.js";async function n(){await r();const t=c("category"),e=new a,o=document.querySelector(".product-list");new i(t,e,o).init(),document.querySelector("#products-title").textContent=`Top Products: ${t.charAt(0).toUpperCase()+t.slice(1)}`,s()}n();
