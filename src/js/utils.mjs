@@ -79,6 +79,20 @@ export function getCartItems(){
 export function clearCartItems(){
   setLocalStorage("so-cart", []);
 }
+export function setCartIconAnimation(){
+  const addToCart = document.querySelector("#addToCart");
+  
+  addToCart.addEventListener('click', () => {
+  
+    const cartIcon = document.querySelector("#cart-count");
+    cartIcon.classList.add('glow');
+    
+    cartIcon.addEventListener('animationend', () => {
+      cartIcon.classList.remove('glow');
+    }, { once: true });
+  });
+}
+
 
 
 export function alertMessage(message, scroll = true) {
