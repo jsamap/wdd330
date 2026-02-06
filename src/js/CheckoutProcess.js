@@ -1,11 +1,5 @@
 import {
-  setCartItemsNumber,
-  loadHeaderFooter,
-  getCartTotal,
-  getCartItems,
-  getCartItemsNumber,
-  getCartTaxes,
-  calculateShippingCost,
+  getLocalStorage,
 } from "./utils.mjs";
 
 export default class CheckoutProcess {
@@ -21,32 +15,42 @@ export default class CheckoutProcess {
 
   init() {
     this.list = getLocalStorage(this.key);
-    this.calculateItemSummary();
+    this.calculateOrderTotal();
   }
 
   calculateItemSubTotal() {
-    const cartItems = getCartItems();
-    let total = 0;
-    cartItems.forEach(item => {
-    total += item.ListPrice;
+    this.list.forEach(item => {
+        this.itemTotal += item.ListPrice;
     });
-    return parseFloat(total.toFixed(2));
+    //this.itemTotal = this.list.reduce((total, item) => total + item.ListPrice, 0);
   }
 
+calculateShippingCost(){
+    for (let i = 0; i < this.list.length; i++) {
+        if (i == 0)
+            this.shipping +=10;
+        else
+            this.shipping += 2;
+    }
+}
   calculateOrderTotal() {
     // calculate the tax and shipping amounts. Add those to the cart total to figure out the order total
-    this.tax = (this.itemTotal )
-    this.shipping =
-    this.orderTotal =
+    this.calculateItemSubTotal();
+    this.tax = (this.itemTotal * 0.06)
+    this.calculateShippingCost();
 
+    this.orderTotal = this.itemTotal+this.tax+this.shipping;
+    
     // display the totals.
     this.displayOrderTotals();
   }
 
   displayOrderTotals() {
     // once the totals are all calculated display them in the order summary page
-    const tax = document.querySelector(`${this.outputSelector} #tax`);
+    document.querySelector(`${this.outputSelector}#subtotal`).innerText = `$${this.itemTotal.toFixed(2)}`;
+    document.querySelector(`${this.outputSelector}#taxes`).innerText = `$${this.tax.toFixed(2)}`;
+    document.querySelector(`${this.outputSelector}#shipping`).innerText = `$${this.shipping.toFixed(2)}`;
+    document.querySelector(`${this.outputSelector}#total`).innerText = `$${this.orderTotal.toFixed(2)}`;
 
-    tax.innerText = `$${this.tax.toFixed(2)}`;
   }
 }

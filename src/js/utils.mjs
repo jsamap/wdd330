@@ -66,30 +66,28 @@ export function setCartItemsNumber(){
   document.getElementById("cart-count").textContent = (cartItems!=null) ? cartItems.length : 0;
 }
 
-export function getCartTotal(){
-  const cartItems = getCartItems();
-  let total = 0;
-  cartItems.forEach(item => {
-    total += item.ListPrice;
-  });
-  return parseFloat(total.toFixed(2));
-}
-export function getCartItems(){
-  return getLocalStorage("so-cart");
-}
-export function getCartItemsNumber(){
-  return getCartItems().length;
-}
-export function getCartTaxes(){
-  return parseFloat((getCartTotal() * 0.06 ).toFixed(2));
-}
-export function calculateShippingCost(itemsNumber){
-    let shippingCost = 0;
-    for (let i = 0; i < itemsNumber; i++) {
-        if (i == 0)
-            shippingCost +=10;
-        else
-            shippingCost += 2;
-    }
-    return parseFloat(shippingCost.toFixed(2));
-} 
+
+// export function getCartTotal(){
+//   const cartItems = getCartItems();
+//   let total = 0;
+//   cartItems.forEach(item => {
+//     total += item.ListPrice;
+//   });
+//   return parseFloat(total.toFixed(2));
+// }
+// export function getCartItems(){
+//   return getLocalStorage("so-cart");
+// }
+// export function getCartItemsNumber(){
+//   return getCartItems().length;
+// }
+// export function calculateShippingCost(itemsNumber){
+//     let shippingCost = 0;
+//     for (let i = 0; i < itemsNumber; i++) {
+//         if (i == 0)
+//             shippingCost +=10;
+//         else
+//             shippingCost += 2;
+//     }
+//     return parseFloat(shippingCost.toFixed(2));
+// } 
