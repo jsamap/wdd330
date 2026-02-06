@@ -1,4 +1,4 @@
-import { getLocalStorage } from "./utils.mjs";
+import { getLocalStorage, clearCartItems, alertMessage } from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
 
 const services = new ExternalServices();
@@ -76,8 +76,13 @@ export default class CheckoutProcess {
     try {
       const response = await services.checkout(order);
       console.log(response);
+      clearCartItems();
+      // window.location.href = "checkout/success.html";
+      window.location.replace("/checkout/success.html");
+
     } catch (err) {
       console.log(err);
+      alertMessage("Please review the fields and try again.");
     }
   }
 }

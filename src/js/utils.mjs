@@ -65,8 +65,6 @@ export function setCartItemsNumber(){
   const cartItems = getLocalStorage("so-cart");
   document.getElementById("cart-count").textContent = (cartItems!=null) ? cartItems.length : 0;
 }
-
-
 export function getCartTotal(){
   const cartItems = getCartItems();
   let total = 0;
@@ -78,6 +76,37 @@ export function getCartTotal(){
 export function getCartItems(){
   return getLocalStorage("so-cart");
 }
+export function clearCartItems(){
+  setLocalStorage("so-cart", []);
+}
+
+
+export function alertMessage(message, scroll = true) {
+  const alert = document.createElement('div');
+  alert.classList.add('alert');
+
+  const text = document.createElement('p');
+  text.textContent = message;
+
+  const close = document.createElement('a');
+  close.textContent = "✖"
+
+  const closeContainer = document.createElement('div');
+  closeContainer.appendChild(close);
+
+  alert.append(text, closeContainer);
+
+  closeContainer.addEventListener('click', function(e) {
+    main.removeChild(alert);
+  })
+
+  const main = document.querySelector('main');
+  main.prepend(alert);
+
+  if(scroll)
+    window.scrollTo(0,0);
+}
+
 // export function getCartItemsNumber(){
 //   return getCartItems().length;
 // }

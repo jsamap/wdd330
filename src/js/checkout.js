@@ -12,6 +12,10 @@ init();
 
 document.querySelector("#checkout-submit").addEventListener("click", (e) => {
   e.preventDefault();
-
-  checkoutProcess.checkout();
+  
+  const checkoutForm = document.forms[0];
+  const chk_status = checkoutForm.checkValidity();
+  checkoutForm.reportValidity();
+  if(chk_status)
+    checkoutProcess.checkout();
 });
