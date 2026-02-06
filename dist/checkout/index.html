@@ -8,23 +8,106 @@
 
     <title>Sleep Outside | Checkout</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="module" crossorigin src="/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+
+    <script type="module" crossorigin src="/assets/checkout-Dw3w6wg4.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/utils-6aLUDPX2.js">
+    <link rel="modulepreload" crossorigin href="/assets/ExternalServices-D9P6I627.js">
+    <link rel="stylesheet" crossorigin href="/assets/utils-1KSx4yT5.css">
   </head>
 
   <body>
-    <header class="divider" id="header">
-
-    </header>
+    <header class="divider" id="header"></header>
 
     <main class="divider">
-      <section class="products">
-        <h2>Review & Place your Order</h2>
+      <h2>Review & Place your Order</h2>
+      <section class="checkout">
+        <div class="checkout-summary">
+          <h3>Order Summary</h3>
+          <div>
+            <p>Subtotal:</p>
+            <span id="subtotal"></span>
+          </div>
+          <div>
+            <p>Taxes:</p>
+            <span id="taxes"></span>
+          </div>
+          <div>
+            <p>Shipping estimate:</p>
+            <span id="shipping"></span>
+          </div>
+          <div>
+            <p class="order-total bold">Order Total:</p>
+            <span id="total" class="bold"></span>
+          </div>
+        </div>
+
+        <form class="checkout-form" name="checkout">
+          <h3>Payment Information</h3>
+
+          <h4>Your information</h4>
+          <hr />
+          <section>
+            <div>
+              <label for="fname">First Name:</label>
+              <input type="text" id="fname" name="fname" required />
+            </div>
+
+            <div>
+              <label for="lname">Last Name:</label>
+              <input type="text" id="lname" name="lname" required />
+            </div>
+          </section>
+
+          <h4>Your address</h4>
+          <hr />
+          <section class="address">
+            <div>
+              <label for="street">Street Address:</label>
+              <input type="text" id="street" name="street" required />
+            </div>
+            <div class="multipleFields">
+              <div>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required />
+              </div>
+
+              <div>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required />
+              </div>
+
+              <div>
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip" required />
+              </div>
+            </div>
+          </section>
+
+          <h4>Payment</h4>
+          <hr />
+          <section class="multipleFields">
+            <div>
+              <label for="cardNumber">Credit Card Number:</label>
+              <input type="text" id="cardNumber" name="cardNumber" required />
+            </div>
+
+            <div>
+              <label for="expiration">Expiration Date:</label>
+              <input type="text" id="expiration" name="expiration" required />
+            </div>
+
+            <div>
+              <label for="code">Security Code:</label>
+              <input type="text" id="code" name="code" required />
+            </div>
+          </section>
+          <section class="form-submit">
+            <input type="submit" value="PLACE ORDER" id="checkout-submit" />
+          </section>
+        </form>
       </section>
     </main>
 
-    <footer id="footer">
-      
-    </footer>
+    <footer id="footer"></footer>
   </body>
 </html>

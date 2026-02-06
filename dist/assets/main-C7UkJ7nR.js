@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";/* empty css              */import{l as s,s as e,P as a}from"./utils-DPhkqAWT.js";import{P as c}from"./ProductList-NsnBa9Xr.js";async function i(){await s();const t="tents",o=new a,r=document.querySelector(".product-list");new c(t,o,r).init(),e()}i();

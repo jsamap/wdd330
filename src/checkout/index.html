@@ -9,14 +9,12 @@
     <title>Sleep Outside | Checkout</title>
 
     <link rel="stylesheet" href="/css/style.css" />
-    
+
     <script src="/js/checkout.js" type="module"></script>
   </head>
 
   <body>
-    <header class="divider" id="header">
-
-    </header>
+    <header class="divider" id="header"></header>
 
     <main class="divider">
       <h2>Review & Place your Order</h2>
@@ -24,88 +22,90 @@
         <div class="checkout-summary">
           <h3>Order Summary</h3>
           <div>
-            <p>Subtotal:</p><span id="subtotal"></span>
+            <p>Subtotal:</p>
+            <span id="subtotal"></span>
           </div>
           <div>
-            <p>Taxes:</p><span id="taxes"></span>
+            <p>Taxes:</p>
+            <span id="taxes"></span>
           </div>
           <div>
-            <p>Shipping estimate:</p><span id="shipping"></span>
+            <p>Shipping estimate:</p>
+            <span id="shipping"></span>
           </div>
           <div>
-            <p class="order-total bold">Order Total:</p><span id="total" class="bold"></span>
+            <p class="order-total bold">Order Total:</p>
+            <span id="total" class="bold"></span>
           </div>
         </div>
 
-        <form action="" class="checkout-form">
+        <form class="checkout-form" name="checkout">
           <h3>Payment Information</h3>
-          
+
           <h4>Your information</h4>
-          <hr>
+          <hr />
           <section>
             <div>
-              <label for="firstName">First Name:</label>
-              <input type="text" id="firstName" name="firstName" required>
+              <label for="fname">First Name:</label>
+              <input type="text" id="fname" name="fname" required />
             </div>
-            
+
             <div>
-              <label for="lastName">Last Name:</label>
-              <input type="text" id="lastName" name="lastName" required>
+              <label for="lname">Last Name:</label>
+              <input type="text" id="lname" name="lname" required />
             </div>
           </section>
 
           <h4>Your address</h4>
-          <hr>
+          <hr />
           <section class="address">
             <div>
-              <label for="streetAddress">Street Address:</label>
-              <input type="text" id="streetAddress" name="streetAddress" required>
+              <label for="street">Street Address:</label>
+              <input type="text" id="street" name="street" required />
             </div>
             <div class="multipleFields">
               <div>
                 <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
+                <input type="text" id="city" name="city" required />
               </div>
-              
+
               <div>
                 <label for="state">State:</label>
-                <input type="text" id="state" name="state" required>
+                <input type="text" id="state" name="state" required />
               </div>
-              
+
               <div>
                 <label for="zip">Zip Code:</label>
-                <input type="text" id="zip" name="zip" required>
+                <input type="text" id="zip" name="zip" required />
               </div>
             </div>
           </section>
 
           <h4>Payment</h4>
-          <hr>
+          <hr />
           <section class="multipleFields">
             <div>
-              <label for="creditCardNumber">Credit Card Number:</label>
-              <input type="text" id="creditCardNumber" name="creditCardNumber" required>
+              <label for="cardNumber">Credit Card Number:</label>
+              <input type="text" id="cardNumber" name="cardNumber" required />
             </div>
 
             <div>
-              <label for="expirationDate">Expiration Date:</label>
-              <input type="text" id="expirationDate" name="expirationDate" required>
+              <label for="expiration">Expiration Date:</label>
+              <input type="text" id="expiration" name="expiration" required />
             </div>
-            
+
             <div>
-              <label for="securityCode">Security Code:</label>
-              <input type="text" id="securityCode" name="securityCode" required>
+              <label for="code">Security Code:</label>
+              <input type="text" id="code" name="code" required />
             </div>
-          </section>  
+          </section>
           <section class="form-submit">
-            <input type="submit" value="PLACE ORDER">
+            <input type="submit" value="PLACE ORDER" id="checkout-submit" />
           </section>
         </form>
       </section>
     </main>
 
-    <footer id="footer">
-      
-    </footer>
+    <footer id="footer"></footer>
   </body>
 </html>

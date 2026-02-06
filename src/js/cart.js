@@ -15,10 +15,9 @@ function renderCartContents() {
   shoppingCart.init();
 }
 
-function setCartTotal(){
+function setCartTotal() {
   document.querySelector("#total").textContent = `$${getCartTotal()}`;
 }
-
 
 async function init() {
   await loadHeaderFooter();

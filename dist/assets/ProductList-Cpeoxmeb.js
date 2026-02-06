@@ -1,4 +1,4 @@
-import{r as s}from"./utils-DPhkqAWT.js";class c{constructor(a,e,r){this.category=a,this.dataSource=e,this.listElement=r}async init(){const a=await this.dataSource.getData(this.category);this.renderList(a)}productCardTemplate(a){return`<li class="product-card">
+import{r as s}from"./utils-6aLUDPX2.js";class c{constructor(a,e,r){this.category=a,this.dataSource=e,this.listElement=r}async init(){const a=await this.dataSource.getData(this.category);this.renderList(a)}productCardTemplate(a){return`<li class="product-card">
             <a href="/product_pages/?product=${a.Id}">
               <div class="product-card-image">
 

@@ -67,17 +67,17 @@ export function setCartItemsNumber(){
 }
 
 
-// export function getCartTotal(){
-//   const cartItems = getCartItems();
-//   let total = 0;
-//   cartItems.forEach(item => {
-//     total += item.ListPrice;
-//   });
-//   return parseFloat(total.toFixed(2));
-// }
-// export function getCartItems(){
-//   return getLocalStorage("so-cart");
-// }
+export function getCartTotal(){
+  const cartItems = getCartItems();
+  let total = 0;
+  cartItems.forEach(item => {
+    total += item.ListPrice;
+  });
+  return parseFloat(total.toFixed(2));
+}
+export function getCartItems(){
+  return getLocalStorage("so-cart");
+}
 // export function getCartItemsNumber(){
 //   return getCartItems().length;
 // }

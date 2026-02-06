@@ -36,7 +36,8 @@ header {
   padding: 0.5rem;
 }
 
-p, span {
+p,
+span {
   padding: 0.75rem;
 }
 
@@ -313,9 +314,9 @@ footer {
   text-align: center;
   font-weight: bold;
   font-size: 1.3rem;
-  
-  & a{
-    padding: .75rem;
+
+  & a {
+    padding: 0.75rem;
     text-decoration: none;
     color: white;
     background-color: #525b0f;
@@ -326,13 +327,12 @@ footer {
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     }
   }
-
 }
 
 /* #endregion */
 
 /* #region Checkout*/
-.checkout{
+.checkout {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -341,7 +341,7 @@ footer {
   @media screen and (min-width: 800px) {
     flex-direction: row;
   }
-  & h3{
+  & h3 {
     padding: 1rem;
     text-align: center;
   }
@@ -349,17 +349,17 @@ footer {
 /* #endregion */
 
 /* #region Checkout Form */
-.checkout-form{
+.checkout-form {
   display: flex;
   flex-direction: column;
   width: auto;
   flex: 1;
   min-width: 0;
-  
-  & input[type="submit"]{
+
+  & input[type="submit"] {
     width: 150px;
   }
-  & section{
+  & section {
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -368,11 +368,11 @@ footer {
     @media screen and (max-width: 500px) {
       flex-wrap: wrap;
     }
-    
-    &.address{
+
+    &.address {
       flex-flow: column;
     }
-    & div.multipleFields{
+    & div.multipleFields {
       flex-flow: row;
       gap: 1rem;
       width: 100%;
@@ -382,7 +382,7 @@ footer {
       }
     }
   }
-  & div{
+  & div {
     width: 100%;
     display: flex;
     flex-flow: column;
@@ -390,17 +390,18 @@ footer {
       flex-wrap: wrap;
     }
   }
-  & input[type="text"]{
-    padding: .5rem;
+  & input[type="text"],
+  input[type="date"] {
+    padding: 0.5rem;
     font-size: 1.1rem;
   }
-  & input[type="submit"]{
-    padding: .5rem;
+  & input[type="submit"] {
+    padding: 0.5rem;
     font-size: 1.1rem;
     background-color: #525b0f;
     color: white;
     border-radius: 3px;
-    
+
     &:hover {
       color: rgb(240, 240, 240);
       box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
@@ -427,14 +428,14 @@ h4 {
 /* #endregion */
 
 /* #region Checkout Summary */
-.checkout-summary{
+.checkout-summary {
   display: flex;
   flex-direction: column;
   min-width: 250px;
 
   background-color: var(--light-grey);
 
-  & div{
+  & div {
     display: flex;
 
     & p {
@@ -446,17 +447,17 @@ h4 {
     }
   }
 }
-.order-total{
-  font-weight: bold;    
+.order-total {
+  font-weight: bold;
 }
-.form-submit{
+.form-submit {
   display: flex;
   justify-content: center;
 }
 /* #endregion */
 
 /* #region General */
-  .bold {
-    font-weight: bold;
-  }
+.bold {
+  font-weight: bold;
+}
 /* #endregion */

@@ -1,39 +1,17 @@
 import CheckoutProcess from "./CheckoutProcess";
-import ShoppingCart from "./ShoppingCart.mjs";
-import {
-  setCartItemsNumber,
-  loadHeaderFooter,
-//   getCartTotal,
-//   getCartItems,
-//   getCartItemsNumber,
-//   getCartTaxes,
-//   calculateShippingCost,
-} from "./utils.mjs";
+import { setCartItemsNumber, loadHeaderFooter } from "./utils.mjs";
+
+const checkoutProcess = new CheckoutProcess("so-cart", "");
+checkoutProcess.init();
 
 async function init() {
   await loadHeaderFooter();
   setCartItemsNumber();
-  fillOrderSummary();
 }
-
-function fillOrderSummary() {
-  const checkoutProcess = new CheckoutProcess("so-cart", "");   
-  checkoutProcess.init();
-}
-
-// function fillOrderSummary() {
-//   const itemsNumber = getCartItemsNumber();
-//   const cartItems = getCartItems();
-
-//   const subtotal = getCartTotal();
-//   const taxes = getCartTaxes();
-//   const shipping = calculateShippingCost(itemsNumber);
-//   const total = subtotal+taxes+shipping;
-
-//   document.querySelector("#subtotal").textContent = `$${subtotal.toFixed(2)}`;
-//   document.querySelector("#taxes").textContent = `$${taxes.toFixed(2)}`;
-//   document.querySelector("#shipping").textContent = `$${shipping.toFixed(2)}`;
-//   document.querySelector("#total").textContent = `$${total.toFixed(2)}`;
-// }
-
 init();
+
+document.querySelector("#checkout-submit").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  checkoutProcess.checkout();
+});
