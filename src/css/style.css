@@ -329,6 +329,19 @@ footer {
   }
 }
 
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(0, 135, 50, 0.7);
+  }
+}
+.glow {
+  animation: glow 1s ease;
+}
+
 /* #endregion */
 
 /* #region Checkout*/
@@ -351,16 +364,16 @@ footer {
   display: flex;
   background-color: rgb(255, 175, 140);
   border: solid 1px lightgray;
-  padding: .25rem;
+  padding: 0.25rem;
   & p {
     width: 90%;
   }
   & a {
     font-weight: bold;
-    text-align: center; 
+    text-align: center;
   }
   & div {
-    padding: .5rem;
+    padding: 0.5rem;
     flex: 1;
     display: flex;
     align-items: center;

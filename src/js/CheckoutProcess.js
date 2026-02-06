@@ -79,7 +79,6 @@ export default class CheckoutProcess {
       clearCartItems();
       // window.location.href = "checkout/success.html";
       window.location.replace("/checkout/success.html");
-
     } catch (err) {
       console.log(err);
       alertMessage("Please review the fields and try again.");

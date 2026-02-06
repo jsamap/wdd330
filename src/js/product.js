@@ -1,4 +1,9 @@
-import { getParam, setCartItemsNumber, loadHeaderFooter } from "./utils.mjs";
+import {
+  getParam,
+  setCartItemsNumber,
+  loadHeaderFooter,
+  setCartIconAnimation,
+} from "./utils.mjs";
 import ExternalServices from "./ExternalServices.mjs";
 import ProductDetails from "./ProductDetails.mjs";
 
@@ -10,6 +15,7 @@ async function init() {
   await loadHeaderFooter();
 
   setCartItemsNumber();
+  setCartIconAnimation();
 }
 
 init();
